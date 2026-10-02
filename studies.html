@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studies & Papers | The Prokaryotic Planet</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="studies">
+<div class="microbe-field" aria-hidden="true"></div>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-icon">🧫</span><span><strong>THE PROKARYOTIC PLANET</strong><small>Explore the hidden universe of bacteria.</small></span></a>
+<button class="mobile-menu" id="mobileMenu">☰</button>
+<nav id="mainNav"><a href="index.html">Home</a><a href="bacteria.html">Explore</a><a href="bacteria.html#taxonomy">Genera</a><a href="bacteria.html#species">Species</a><a class="active" href="studies.html">Studies</a><a href="bacteria.html#disease">Disease</a><a href="bacteria.html#therapeutics">Therapeutics</a><a href="bacteria.html#lab">Interactive Lab</a><a href="about.html">About</a></nav>
+<button class="search-trigger" id="globalSearchTrigger">⌕ <span>Search</span></button>
+</header>
+<main>
+<section class="page-hero section-sm"><div class="section-kicker">RESEARCH & PAPERS</div><h1>Turn an ocean of papers into <span>clear pathways.</span></h1><p>Browse demonstration research records by organism and research category. Real literature should later be retrieved from scientific APIs such as PubMed.</p></section>
+<section class="section">
+<div class="research-toolbar">
+<div class="quick-search"><span>⌕</span><input id="paperSearch" placeholder="Search papers, bacteria, journals, PMIDs..."></div>
+<select id="categoryFilter"><option value="">All categories</option><option>General Studies</option><option>Disease Studies</option><option>Therapeutic Studies</option></select>
+<select id="yearFilter"><option value="">All years</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option></select>
+</div>
+<div id="studyStats" class="mini-stats"></div>
+<div id="allPapers" class="paper-grid"></div>
+</section>
+<section class="section">
+<div class="section-kicker">RESEARCH MAP</div><h2>Three primary <span>pathways.</span></h2>
+<div class="research-path-grid">
+<article><span>01</span><b>General studies</b><p>Biology, genomics, ecology, metabolism and fundamental bacterial systems.</p></article>
+<article><span>02</span><b>Disease studies</b><p>Pathogenesis, epidemiology, host interaction and disease-associated research.</p></article>
+<article><span>03</span><b>Therapeutic studies</b><p>Antibiotics, vaccines, phages, drug targets and other intervention research.</p></article>
+</div>
+</section>
+</main>
+<footer><div><strong>🧫 THE PROKARYOTIC PLANET</strong><p>Research explorer.</p></div><div><span class="demo-pill">DEMONSTRATION DATA</span></div></footer>
+<div class="search-modal" id="searchModal" aria-hidden="true"><div class="modal-backdrop" data-close-search></div><div class="search-dialog"><button class="modal-close" data-close-search>×</button><div class="section-kicker">GLOBAL SEARCH</div><h2>Search the microbial universe</h2><div class="quick-search"><span>⌕</span><input id="globalSearch" placeholder="Try a bacterium, genus, disease, gene..."></div><div id="globalResults" class="search-results"></div></div></div>
+<script src="js/app.js"></script><script src="js/studies.js"></script><script src="js/search.js"></script>
+</body></html>

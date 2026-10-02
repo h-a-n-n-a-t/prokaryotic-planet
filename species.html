@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Species Profile | The Prokaryotic Planet</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="species">
+<div class="microbe-field" aria-hidden="true"></div>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-icon">🧫</span><span><strong>THE PROKARYOTIC PLANET</strong><small>Explore the hidden universe of bacteria.</small></span></a>
+<button class="mobile-menu" id="mobileMenu">☰</button>
+<nav id="mainNav"><a href="index.html">Home</a><a href="bacteria.html">Explore</a><a href="bacteria.html#taxonomy">Genera</a><a class="active" href="species.html">Species</a><a href="studies.html">Studies</a><a href="bacteria.html#disease">Disease</a><a href="bacteria.html#therapeutics">Therapeutics</a><a href="bacteria.html#lab">Interactive Lab</a><a href="about.html">About</a></nav>
+<button class="search-trigger" id="globalSearchTrigger">⌕ <span>Search</span></button>
+</header>
+
+<main id="speciesPage">
+<section class="section-sm profile-hero">
+<div class="breadcrumb"><a href="bacteria.html">Explorer</a><span>›</span><span>Species profile</span></div>
+<div id="profileHeader"></div>
+</section>
+<section class="section profile-grid">
+<div>
+<div class="info-section"><div class="section-kicker">TAXONOMY</div><div id="taxonomyCards" class="info-grid"></div></div>
+<div class="info-section"><div class="section-kicker">BIOLOGY</div><div id="biologyCards" class="info-grid"></div></div>
+<div class="info-section"><div class="section-kicker">GENOME</div><div id="genomeCards" class="info-grid"></div></div>
+<div class="info-section"><div class="section-kicker">PATHOGENICITY</div><div id="pathogenCards" class="info-grid"></div></div>
+<div class="info-section"><div class="section-kicker">ECOLOGY</div><div id="ecologyCards" class="info-grid"></div></div>
+</div>
+<aside class="sticky-side">
+<div class="side-card"><div class="section-kicker">QUICK LINKS</div><a href="#research">Research papers →</a><a href="#resistance">Resistance →</a><a href="#diseases">Disease links →</a><button id="favoriteBtn">☆ Save organism</button></div>
+<div id="resistance" class="side-card"><div class="section-kicker">RESISTANCE</div><div id="resistanceBox"></div></div>
+<div id="diseases" class="side-card"><div class="section-kicker">DISEASE ASSOCIATIONS</div><div id="diseaseBox"></div></div>
+</aside>
+</section>
+
+<section class="section" id="research">
+<div class="section-heading"><div><div class="section-kicker">RESEARCH DASHBOARD</div><h2>Research around <span id="researchName">this organism.</span></h2></div><a href="studies.html" class="text-link">Research explorer →</a></div>
+<div class="research-tabs"><button class="active" data-category="All">All</button><button data-category="General Studies">General studies</button><button data-category="Disease Studies">Disease studies</button><button data-category="Therapeutic Studies">Therapeutic studies</button></div>
+<div id="paperGrid" class="paper-grid"></div>
+</section>
+</main>
+
+<footer><div><strong>🧫 THE PROKARYOTIC PLANET</strong><p>Interactive species profile.</p></div><div><span class="demo-pill">DEMONSTRATION DATA</span></div></footer>
+<div class="search-modal" id="searchModal" aria-hidden="true"><div class="modal-backdrop" data-close-search></div><div class="search-dialog"><button class="modal-close" data-close-search>×</button><div class="section-kicker">GLOBAL SEARCH</div><h2>Search the microbial universe</h2><div class="quick-search"><span>⌕</span><input id="globalSearch" placeholder="Try a bacterium, genus, disease, gene..."></div><div id="globalResults" class="search-results"></div></div></div>
+<script src="js/app.js"></script><script src="js/species.js"></script><script src="js/search.js"></script>
+</body></html>

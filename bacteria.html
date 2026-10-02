@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bacterial Explorer | The Prokaryotic Planet</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="explore">
+  <div class="microbe-field" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-icon">🧫</span><span><strong>THE PROKARYOTIC PLANET</strong><small>Explore the hidden universe of bacteria.</small></span></a>
+    <button class="mobile-menu" id="mobileMenu">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a><a class="active" href="bacteria.html">Explore</a><a href="#taxonomy">Genera</a><a href="#species">Species</a><a href="studies.html">Studies</a><a href="#disease">Disease</a><a href="#therapeutics">Therapeutics</a><a href="#lab">Interactive Lab</a><a href="about.html">About</a>
+    </nav>
+    <button class="search-trigger" id="globalSearchTrigger">⌕ <span>Search</span></button>
+  </header>
+
+  <main>
+    <section class="page-hero section-sm">
+      <div class="section-kicker">BACTERIAL EXPLORER</div>
+      <h1>Navigate the <span>biosphere.</span></h1>
+      <p>Search the demonstration dataset by organism, taxonomy, disease, resistance or research topic.</p>
+    </section>
+
+    <section class="section explorer-layout">
+      <aside class="filter-panel">
+        <div class="filter-title"><strong>FILTERS</strong><button id="clearFilters">Clear</button></div>
+        <label>Search<input id="bacteriaSearch" placeholder="e.g. MRSA, E. coli"></label>
+        <label>Phylum<select id="phylumFilter"><option value="">All phyla</option></select></label>
+        <label>Genus<select id="genusFilter"><option value="">All genera</option></select></label>
+        <label>Gram status<select id="gramFilter"><option value="">All</option><option>Gram-positive</option><option>Gram-negative</option><option>Acid-fast</option></select></label>
+        <label>Shape<select id="shapeFilter"><option value="">All</option><option>Coccus</option><option>Rod</option><option>Curved rod</option></select></label>
+        <label>Oxygen<select id="oxygenFilter"><option value="">All</option><option>Facultative anaerobe</option><option>Obligate aerobe</option><option>Aerobic</option><option>Other</option></select></label>
+        <div class="filter-checks">
+          <label class="check"><input type="checkbox" id="pathogenFilter"> Pathogenic / opportunistic</label>
+          <label class="check"><input type="checkbox" id="resistanceFilter"> Resistance records</label>
+        </div>
+      </aside>
+
+      <div class="results-panel">
+        <div class="results-head"><div><div class="section-kicker">ORGANISM CATALOG</div><h2 id="resultsTitle">Bacteria</h2></div><span id="resultCount" class="count-pill">0 organisms</span></div>
+        <div id="bacteriaGrid" class="bacteria-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="taxonomy">
+      <div class="section-heading"><div><div class="section-kicker">TAXONOMY</div><h2>Explore the <span>tree of life.</span></h2></div></div>
+      <div id="taxonomyTree" class="taxonomy-tree"></div>
+    </section>
+
+    <section class="section" id="species">
+      <div class="section-heading"><div><div class="section-kicker">SPECIES INDEX</div><h2>Species at a <span>glance.</span></h2></div></div>
+      <div id="speciesIndex" class="species-index"></div>
+    </section>
+
+    <section class="section split-section" id="disease">
+      <div><div class="section-kicker">DISEASE EXPLORER</div><h2>Trace <span>bacteria</span> through disease.</h2><p>Explore organism–disease relationships in the prototype dataset. Each organism opens a detailed profile.</p></div>
+      <div id="diseaseCloud" class="tag-cloud"></div>
+    </section>
+
+    <section class="section split-section" id="therapeutics">
+      <div><div class="section-kicker">THERAPEUTICS</div><h2>From <span>microbe</span> to intervention.</h2><p>Prototype categories for antibiotics, phage therapy, vaccines, antimicrobial peptides, CRISPR-based approaches and novel targets.</p></div>
+      <div class="therapy-grid">
+        <article>💊<strong>Antibiotics</strong><small>Drug–organism relationships</small></article>
+        <article>🧬<strong>Phage therapy</strong><small>Targeted bacterial killing</small></article>
+        <article>🛡<strong>Vaccines</strong><small>Prevention research</small></article>
+        <article>🔬<strong>Novel targets</strong><small>Future discovery space</small></article>
+      </div>
+    </section>
+
+    <section class="section" id="lab">
+      <div class="section-kicker">INTERACTIVE LAB</div>
+      <h2>Run a <span>scientific simulation.</span></h2>
+      <p class="section-intro">A modern integration container is provided for a future Java-based scientific application. Traditional browser Java applets are not used.</p>
+      <div class="lab-console">
+        <div class="console-top"><span><i></i><i></i><i></i></span><small>SCIENTIFIC SIMULATION ENGINE</small><span>API READY</span></div>
+        <div class="console-body">
+          <div class="simulation-orb"><div class="orb-core">🦠</div></div>
+          <div><div class="section-kicker">SIMULATION PLACEHOLDER</div><h3>Interactive bacterial growth lab</h3><p>Connect a Java service or modern simulation backend here later. The frontend contract is ready for API communication.</p><button class="btn btn-primary" id="launchSimulation">Launch simulation</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div><strong>🧫 THE PROKARYOTIC PLANET</strong><p>Prototype bacterial explorer.</p></div><div><span class="demo-pill">DEMONSTRATION DATA</span></div></footer>
+
+  <div class="search-modal" id="searchModal" aria-hidden="true"><div class="modal-backdrop" data-close-search></div><div class="search-dialog"><button class="modal-close" data-close-search>×</button><div class="section-kicker">GLOBAL SEARCH</div><h2>Search the microbial universe</h2><div class="quick-search"><span>⌕</span><input id="globalSearch" placeholder="Try a bacterium, genus, disease, gene..."></div><div id="globalResults" class="search-results"></div></div></div>
+
+  <script src="js/app.js"></script><script src="js/bacteria.js"></script><script src="js/search.js"></script>
+</body>
+</html>
