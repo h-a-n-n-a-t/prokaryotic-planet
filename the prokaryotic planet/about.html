@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | The Prokaryotic Planet</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="about">
+<div class="microbe-field" aria-hidden="true"></div>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-icon">🧫</span><span><strong>THE PROKARYOTIC PLANET</strong><small>Explore the hidden universe of bacteria.</small></span></a>
+<button class="mobile-menu" id="mobileMenu">☰</button>
+<nav id="mainNav"><a href="index.html">Home</a><a href="bacteria.html">Explore</a><a href="bacteria.html#taxonomy">Genera</a><a href="bacteria.html#species">Species</a><a href="studies.html">Studies</a><a href="bacteria.html#disease">Disease</a><a href="bacteria.html#therapeutics">Therapeutics</a><a href="bacteria.html#lab">Interactive Lab</a><a class="active" href="about.html">About</a></nav>
+<button class="search-trigger" id="globalSearchTrigger">⌕ <span>Search</span></button>
+</header>
+<main>
+<section class="page-hero section-sm"><div class="section-kicker">ABOUT THE PROJECT</div><h1>Making the bacterial world <span>navigable.</span></h1><p>The Prokaryotic Planet is designed as an interactive scientific knowledge interface: less rummaging through an ocean of information, more guided exploration.</p></section>
+<section class="section about-grid">
+<article class="feature-card"><span>🧭</span><h3>Explore</h3><p>Move naturally from taxonomy to genus, species, biology, disease, resistance, therapeutics and research.</p></article>
+<article class="feature-card"><span>📚</span><h3>Organize</h3><p>Research records are separated into general, disease and therapeutic pathways so users can reach the information they need quickly.</p></article>
+<article class="feature-card"><span>🔌</span><h3>Connect</h3><p>The frontend is API-ready for future scientific sources including NCBI Taxonomy, PubMed, BacDive, UniProt, KEGG, BV-BRC, GTDB, CARD and ResFinder.</p></article>
+</section>
+<section class="section architecture">
+<div><div class="section-kicker">FUTURE DATA ARCHITECTURE</div><h2>From <span>scientific databases</span> to one interface.</h2></div>
+<div class="arch-flow"><div>NCBI<br><small>Taxonomy / Genome</small></div><i>→</i><div>PubMed<br><small>Literature</small></div><i>→</i><div>Data layer<br><small>Backend / APIs</small></div><i>→</i><div class="accent">PROKARYOTIC<br>PLANET<br><small>Interactive frontend</small></div></div>
+</section>
+<section class="section disclaimer"><div class="section-kicker">SCIENTIFIC DATA NOTE</div><h2>Prototype ≠ complete bacterial census.</h2><p>The included records are demonstration data. A production version should retrieve, normalize, cite and update real records from authoritative databases and should never claim complete coverage unless that coverage is actually established.</p></section>
+</main>
+<footer><div><strong>🧫 THE PROKARYOTIC PLANET</strong><p>Explore the hidden universe of bacteria.</p></div><div><span class="demo-pill">FRONTEND PROTOTYPE</span></div></footer>
+<div class="search-modal" id="searchModal" aria-hidden="true"><div class="modal-backdrop" data-close-search></div><div class="search-dialog"><button class="modal-close" data-close-search>×</button><div class="section-kicker">GLOBAL SEARCH</div><h2>Search the microbial universe</h2><div class="quick-search"><span>⌕</span><input id="globalSearch" placeholder="Try a bacterium, genus, disease, gene..."></div><div id="globalResults" class="search-results"></div></div></div>
+<script src="js/app.js"></script><script src="js/search.js"></script>
+</body></html>

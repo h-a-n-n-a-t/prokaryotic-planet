@@ -1,0 +1,10 @@
+{
+  "name": "prokaryotic-planet",
+  "version": "1.0.0",
+  "description": "The Prokaryotic Planet - interactive bacterial knowledge frontend prototype",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["bacteria", "microbiology", "taxonomy", "scientific-dashboard"],
+  "license": "MIT"
+}
